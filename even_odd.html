@@ -55,24 +55,21 @@
 </div>
 
 <script>
-    // 1. Select the DOM elements
+    
     const numberInput = document.getElementById('numberInput');
     const checkBtn = document.getElementById('checkBtn');
     const resultDiv = document.getElementById('result');
 
-    // 2. Add an event listener to the button
     checkBtn.addEventListener('click', function() {
-        // Get the value from the input field and convert it to a number
+    
         const num = parseInt(numberInput.value);
 
-        // 3. Validation: Check if the input is actually a number
+        
         if (isNaN(num)) {
             resultDiv.textContent = "Please enter a valid number! ⚠️";
             resultDiv.style.color = "orange";
-            return; // Stop execution
+            return; 
         }
-
-        // 4. Core Logic & DOM Manipulation
         if (num % 2 === 0) {
             resultDiv.textContent = `${num} is an EVEN number. 🔵`;
             resultDiv.style.color = "green";
